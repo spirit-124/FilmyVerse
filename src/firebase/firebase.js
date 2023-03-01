@@ -21,4 +21,4 @@ export const db = getFirestore(app);
 export const moviesRef = collection(db, "movies");
 
 
-export default app
+export default app;
