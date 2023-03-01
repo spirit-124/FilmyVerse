@@ -6,7 +6,6 @@ import { getDoc, doc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { db } from "../firebase/firebase";
 import { Bars } from "react-loader-spinner";
-import Review from "./Review";
 
 const Details = () => {
   const { id } = useParams();
@@ -54,8 +53,6 @@ const Details = () => {
               size={20}
             />
             <p className="mt-3  ">{data.description}</p>
-
-            <Review />
           </div>
         </>
       )}
