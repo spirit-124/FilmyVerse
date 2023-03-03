@@ -1,13 +1,14 @@
 // import { async } from "@firebase/util";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { TailSpin } from "react-loader-spinner";
 // import { moviesRef } from "../firebase/firebase";
 import swal from "sweetalert";
 import { addDoc } from "firebase/firestore";
 import { moviesRef } from "../firebase/firebase";
 import { async } from "@firebase/util";
-
+import { Appstate } from "../App";
 const AddMovie = () => {
+  const useAppstate = useContext(Appstate);
   const [form, setForm] = useState({
     title: "",
     year: "",
@@ -41,10 +42,7 @@ const AddMovie = () => {
           <h1 className="sm:text-3xl text-3xl font-medium title-font mb-4 text-blue-900">
             Add Movies
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify.
-          </p>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
         </div>
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
           <div className="flex flex-wrap -m-2">
