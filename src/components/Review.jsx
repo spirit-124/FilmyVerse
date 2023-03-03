@@ -69,7 +69,7 @@ const Reviews = ({ id, prevRating, userRated }) => {
     async function getData() {
       setReviewsLoading(true);
       setData([]);
-      let quer = query(reviewsRef, where("movieid", "==", id));
+      let quer = query(reviewsRef, where("moviesid", "==", id));
       const querySnapshot = await getDocs(quer);
 
       querySnapshot.forEach((doc) => {
