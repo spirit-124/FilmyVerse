@@ -1,12 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import {getFirestore, collection} from "firebase/firestore";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAMHsdwJ-nbFreZpoEH1pXOEP3ML0SzxW4",
+  apiKey: "FIREBASE_AUTHENTICATION_KEY",
   authDomain: "filmyverse-7d623.firebaseapp.com",
   projectId: "filmyverse-7d623",
   storageBucket: "filmyverse-7d623.appspot.com",

@@ -91,17 +91,20 @@ const Reviews = ({ id, prevRating, userRated }) => {
       />
       <input
         value={form}
-        onChange={(e) => setForm(e.target.value)}
-        placeholder="Share Your thoughts..."
-        className="w-full p-2 outline-none header"
+        onChange={(e) => {
+          setForm(e.target.value);
+        }}
+        type="text"
+        placeholder="Share your thoughts...."
+        className="w-full header outline-none p-2 bg-slate-900 rounded-lg"
       />
+
       <button
         onClick={sendReview}
         className="bg-green-600 flex justify-center w-full p-2"
       >
         {loading ? <TailSpin height={20} color="white" /> : "Share"}
       </button>
-
       {reviewsLoading ? (
         <div className="mt-6 flex justify-center">
           <ThreeDots height={10} color="white" />
