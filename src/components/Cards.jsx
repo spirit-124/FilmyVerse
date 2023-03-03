@@ -50,7 +50,7 @@ const Cards = () => {
                         <span className="">
                           <ReactStars
                             count={5}
-                            value={5}
+                            value={e.rating / e.rated}
                             edit={false}
                             size={20}
                           />

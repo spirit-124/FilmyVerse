@@ -16,6 +16,7 @@ const Details = () => {
     image: "",
     year: "",
     rating: 0,
+    rated: 0,
   });
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -49,13 +50,13 @@ const Details = () => {
             <ReactStars
               className="mt-1"
               count={5}
-              value={5}
+              value={data.rating / data.rated}
               edit={false}
               size={20}
             />
             <p className="mt-3  ">{data.description}</p>
 
-            <Review />
+            <Review id={id} prevRating={data.rating} userRated={data.rated} />
           </div>
         </>
       )}
