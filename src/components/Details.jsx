@@ -21,11 +21,11 @@ const Details = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     async function getData() {
-      // setLoading(true);
+      setLoading(true);
       const _doc = doc(db, "movies", id);
       const _data = await getDoc(_doc);
       setData(_data.data());
-      // setLoading(false);
+      setLoading(false);
     }
     getData();
   }, []);
@@ -49,10 +49,11 @@ const Details = () => {
             </h1>
             <ReactStars
               className="mt-1"
-              count={5}
+              // count={5}
               value={data.rating / data.rated}
               edit={false}
               size={20}
+              half={true}
             />
             <p className="mt-3  ">{data.description}</p>
 

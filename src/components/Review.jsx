@@ -103,8 +103,9 @@ const Review = ({ id, prevRating, userRated }) => {
           <div className="">
             {data.map((e, i) => {
               return (
-                <div className="" key={i}>
-                  {e.thought}
+                <div className="bg-gray-900" key={i}>
+                  <p>{e.name}</p>
+                  <p>{new Date(e.timestamp).toLocaleString()}</p>
                 </div>
               );
             })}
